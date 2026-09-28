@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundo Barra | Pizzería y Restaurante en Aplao - Valle de Majes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316', // Vibrant warm orange / terracotta accent
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            900: '#7c2d12',
+                            dark: '#1c1917',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo & Name -->
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-amber-500 flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform">
+                    <i class="fa-solid fa-pizza-slice text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-stone-900 block leading-tight">Fundo Barra</span>
+                    <span class="text-xs text-brand-600 font-medium tracking-wide">El sabor que une al Valle de Majes</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-stone-600">
+                <a href="#inicio" class="hover:text-brand-600 transition-colors">Inicio</a>
+                <a href="#nosotros" class="hover:text-brand-600 transition-colors">Nosotros</a>
+                <a href="#productos" class="hover:text-brand-600 transition-colors">Productos / Menú</a>
+                <a href="#contacto" class="hover:text-brand-600 transition-colors">Contacto</a>
+            </nav>
+
+            <!-- Call to Action button (WhatsApp) -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/51959040140?text=Hola,%20deseo%20hacer%20una%20consulta%20o%20pedido%20en%20Fundo%20Barra" target="_blank" rel="noopener noreferrer" 
+                   class="bg-emerald-600 hover:bg-emerald-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Pedir por WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-stone-700 hover:text-brand-600 p-2 focus:outline-none" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#inicio" class="block py-2 text-stone-700 hover:text-brand-600 font-medium mobile-link">Inicio</a>
+            <a href="#nosotros" class="block py-2 text-stone-700 hover:text-brand-600 font-medium mobile-link">Nosotros</a>
+            <a href="#productos" class="block py-2 text-stone-700 hover:text-brand-600 font-medium mobile-link">Productos / Menú</a>
+            <a href="#contacto" class="block py-2 text-stone-700 hover:text-brand-600 font-medium mobile-link">Contacto</a>
+            <div class="pt-2">
+                <a href="https://wa.me/51959040140?text=Hola,%20deseo%20hacer%20una%20consulta%20o%20pedido%20en%20Fundo%20Barra" target="_blank" rel="noopener noreferrer" 
+                   class="w-full bg-emerald-600 text-white font-medium px-4 py-3 rounded-xl shadow flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Escribir por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-28 pb-20 md:pt-36 md:py-32 bg-stone-900 text-white overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0 opacity-45">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1920&auto=format&fit=crop" 
+                 alt="Restaurante Fundo Barra ambiente" class="w-full h-full object-cover object-center" onerror="this.src='https://placehold.co/1920x1080/1c1917/ffffff?text=Fundo+Barra'">
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-900/80 to-transparent z-10"></div>
+
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-center min-h-[60vh]">
+            <span class="inline-flex items-center gap-2 bg-brand-500/20 text-brand-400 border border-brand-500/30 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
+                <i class="fa-solid fa-fire"></i> Pizzería y Restaurante Campestre en Aplao
+            </span>
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight max-w-3xl leading-tight mb-6">
+                El sabor que une al <span class="text-brand-500">Valle de Majes</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-stone-300 max-w-2xl mb-8 leading-relaxed">
+                Bienvenido a <strong>Fundo Barra</strong>. Brindamos la mejor experiencia culinaria, pizzas artesanales al horno, alitas y carnes en un ambiente acogedor para compartir con familia y amigos en el corazón de Aplao.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#productos" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all text-center flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-utensils"></i> Ver Menú y Tamaños
+                </a>
+                <a href="https://wa.me/51959040140?text=Hola,%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" 
+                   class="bg-stone-800/80 hover:bg-stone-800 text-white border border-stone-700 font-semibold px-8 py-4 rounded-xl backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i> Pedir por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-stone-100">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Pizzas artesanales en Fundo Barra" class="w-full h-[400px] object-cover" onerror="this.src='https://placehold.co/800x600/e7e5e4/44403c?text=Fundo+Barra'">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-brand-500 text-white p-6 rounded-2xl shadow-xl hidden sm:block max-w-xs">
+                        <p class="text-3xl font-extrabold mb-1">Valle de Majes</p>
+                        <p class="text-sm font-medium opacity-95">Tradición, calidad y el mejor ambiente en Aplao.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="inline-block text-brand-600 font-semibold text-sm uppercase tracking-wider mb-2">Sobre Nosotros</div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight mb-6">
+                        Definiendo la excelencia en hospitalidad y sabor
+                    </h2>
+                    <div class="space-y-4 text-stone-600 leading-relaxed mb-8">
+                        <p>
+                            <strong>Nombre del Negocio:</strong> Fundo Barra
+                        </p>
+                        <p>
+                            <strong>Rubro:</strong> Pizzería y Restaurante Campestre / Comida Casual
+                        </p>
+                        <p>
+                            <strong>Objetivo:</strong> Brindar la mejor experiencia culinaria y de encuentro familiar en el Valle de Majes, ofreciendo preparaciones artesanales de alta calidad en un espacio cálido, moderno y seguro.
+                        </p>
+                        <p>
+                            Ubicados estratégicamente en la Av. 3 de Abril en Aplao, nos hemos convertido en el punto de reunión favorito para residentes y turistas que buscan disfrutar de pizzas al horno de leña, piqueos criollos y excelentes carnes.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-stone-100">
+                        <div>
+                            <p class="text-2xl font-bold text-stone-900 mb-1">Ubicación Céntrica</p>
+                            <p class="text-sm text-stone-500">Av. 3 de Abril, Aplao, Arequipa</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl font-bold text-stone-900 mb-1">Atención Diaria</p>
+                            <p class="text-sm text-stone-500">Lunes a Domingo de 4:30 PM a 11:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products & Menu Section (Pizza Sizes & Expanded Flavors & New Dishes) -->
+    <section id="productos" class="py-20 bg-stone-100/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider block mb-2">Nuestro Menú Especial</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight mb-4">
+                    Pizzas Artesanales y Platos Destacados
+                </h2>
+                <p class="text-stone-600">
+                    Disfruta de nuestra amplia variedad de pizzas en múltiples tamaños, además de nuestras nuevas especialidades en carnes y alitas.
+                </p>
+            </div>
+
+            <!-- Special Promotion Card Banner (Trío de Alitas) -->
+            <div class="bg-gradient-to-r from-brand-600 to-amber-600 rounded-3xl p-8 text-white shadow-xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+                <div class="absolute -right-10 -bottom-10 opacity-15 text-9xl">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <div class="relative z-10">
+                    <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                        <i class="fa-solid fa-star"></i> Promoción Imperdible
+                    </span>
+                    <h3 class="text-3xl font-extrabold mb-2">Trío de Alitas Fundo Barra</h3>
+                    <p class="text-stone-100 max-w-xl text-sm sm:text-base leading-relaxed">
+                        Prueba nuestra combinación especial de 3 sabores únicos de alitas crujientes con papas doradas y salsas de la casa. ¡Ideal para compartir!
+                    </p>
+                </div>
+                <div class="relative z-10 flex flex-col items-center md:items-end shrink-0">
+                    <div class="text-3xl font-black bg-white text-brand-700 px-6 py-3 rounded-2xl shadow-md mb-3">
+                        S/. 49.00
+                    </div>
+                    <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20la%20promocion%20Trio%20de%20Alitas%20a%20S/.%2049.00" target="_blank" rel="noopener noreferrer" 
+                       class="bg-stone-900 hover:bg-stone-800 text-white text-xs font-semibold px-6 py-3 rounded-xl transition-all shadow flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i> Pedir Trío de Alitas
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pizza Sizes Reference Guide Bar -->
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/80 mb-12">
+                <h3 class="text-lg font-bold text-stone-900 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-ruler-combined text-brand-600"></i> Guía de Tamaños de Pizza
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                        <span class="block text-brand-600 font-bold text-base mb-1">Individual</span>
+                        <span class="text-xs text-stone-500 block">Ideal para 1 persona (4 porciones)</span>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                        <span class="block text-brand-600 font-bold text-base mb-1">Pequeña</span>
+                        <span class="text-xs text-stone-500 block">Ideal para 1-2 personas (6 porciones)</span>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                        <span class="block text-brand-600 font-bold text-base mb-1">Mediana</span>
+                        <span class="text-xs text-stone-500 block">Ideal para 2-3 personas (8 porciones)</span>
+                    </div>
+                    <div class="bg-stone-50 p-4 rounded-xl border border-stone-200">
+                        <span class="block text-brand-600 font-bold text-base mb-1">Familiar</span>
+                        <span class="text-xs text-stone-500 block">Ideal para grupos o familia (12 porciones)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pizza Grid (Expanded Flavors) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                
+                <!-- Pizza 1: Fundo Barra -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-stone-200/60">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" 
+                             alt="Pizza Fundo Barra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/ea580c/ffffff?text=Pizza+Fundo+Barra'">
+                        <div class="absolute top-3 right-3 bg-brand-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                            Especial de la Casa
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Pizza Fundo Barra</h3>
+                            <p class="text-sm text-stone-600 mb-4 leading-relaxed">
+                                Nuestra pizza insignia al horno con masa artesanal, carnes selectas, champiñones frescos y extra queso mozzarella fundido.
+                            </p>
+                            <!-- Size Price List -->
+                            <div class="space-y-1.5 bg-stone-50 p-3 rounded-xl border border-stone-200/60 text-xs mb-4">
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Individual:</span>
+                                    <span class="font-bold text-stone-900">S/. 18.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Pequeña:</span>
+                                    <span class="font-bold text-stone-900">S/. 25.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Mediana:</span>
+                                    <span class="font-bold text-stone-900">S/. 38.00</span>
+                                </div>
+                                <div class="flex justify-between py-1">
+                                    <span class="text-stone-600 font-medium">Familiar:</span>
+                                    <span class="font-bold text-brand-600">S/. 52.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20la%20Pizza%20Fundo%20Barra" target="_blank" rel="noopener noreferrer" 
+                               class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 2: Pepperoni -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-stone-200/60">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?q=80&w=600&auto=format&fit=crop" 
+                             alt="Pizza Pepperoni" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/f97316/ffffff?text=Pizza+Pepperoni'">
+                        <div class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Pizza Pepperoni</h3>
+                            <p class="text-sm text-stone-600 mb-4 leading-relaxed">
+                                Clásica y favorita de muchos, cubierta con generosas rodajas de pepperoni americano y abundante mozzarella fundida.
+                            </p>
+                            <!-- Size Price List -->
+                            <div class="space-y-1.5 bg-stone-50 p-3 rounded-xl border border-stone-200/60 text-xs mb-4">
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Individual:</span>
+                                    <span class="font-bold text-stone-900">S/. 16.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Pequeña:</span>
+                                    <span class="font-bold text-stone-900">S/. 22.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Mediana:</span>
+                                    <span class="font-bold text-stone-900">S/. 34.00</span>
+                                </div>
+                                <div class="flex justify-between py-1">
+                                    <span class="text-stone-600 font-medium">Familiar:</span>
+                                    <span class="font-bold text-brand-600">S/. 48.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20la%20Pizza%20Pepperoni" target="_blank" rel="noopener noreferrer" 
+                               class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 3: Hawaiana (Corrected Image: Real Pizza) -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-stone-200/60">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=600&auto=format&fit=crop" 
+                             alt="Pizza Hawaiana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/ea580c/ffffff?text=Pizza+Hawaiana'">
+                        <div class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Dulce y Salado
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Pizza Hawaiana</h3>
+                            <p class="text-sm text-stone-600 mb-4 leading-relaxed">
+                                La deliciosa combinación de jugosos trozos de piña fresca, jamón inglés de primera calidad y el toque preciso de queso fundido.
+                            </p>
+                            <!-- Size Price List -->
+                            <div class="space-y-1.5 bg-stone-50 p-3 rounded-xl border border-stone-200/60 text-xs mb-4">
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Individual:</span>
+                                    <span class="font-bold text-stone-900">S/. 15.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Pequeña:</span>
+                                    <span class="font-bold text-stone-900">S/. 20.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Mediana:</span>
+                                    <span class="font-bold text-stone-900">S/. 32.00</span>
+                                </div>
+                                <div class="flex justify-between py-1">
+                                    <span class="text-stone-600 font-medium">Familiar:</span>
+                                    <span class="font-bold text-brand-600">S/. 45.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20la%20Pizza%20Hawaiana" target="_blank" rel="noopener noreferrer" 
+                               class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 4: Americana -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-stone-200/60">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?q=80&w=600&auto=format&fit=crop" 
+                             alt="Pizza Americana" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/1c1917/ffffff?text=Pizza+Americana'">
+                        <div class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-sm text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                            Tradicional
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Pizza Americana</h3>
+                            <p class="text-sm text-stone-600 mb-4 leading-relaxed">
+                                El tradicional favorito de todos con finas láminas de jamón de calidad superior y abundante queso fundido sobre salsa de tomate.
+                            </p>
+                            <!-- Size Price List -->
+                            <div class="space-y-1.5 bg-stone-50 p-3 rounded-xl border border-stone-200/60 text-xs mb-4">
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Individual:</span>
+                                    <span class="font-bold text-stone-900">S/. 14.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Pequeña:</span>
+                                    <span class="font-bold text-stone-900">S/. 19.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Mediana:</span>
+                                    <span class="font-bold text-stone-900">S/. 28.00</span>
+                                </div>
+                                <div class="flex justify-between py-1">
+                                    <span class="text-stone-600 font-medium">Familiar:</span>
+                                    <span class="font-bold text-brand-600">S/. 40.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20la%20Pizza%20Americana" target="_blank" rel="noopener noreferrer" 
+                               class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza 5: Suprema -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col group border border-stone-200/60">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop" 
+                             alt="Pizza Suprema" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/ea580c/ffffff?text=Pizza+Suprema'">
+                        <div class="absolute top-3 right-3 bg-brand-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md">
+                            Variedad
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-stone-900 mb-2">Pizza Suprema</h3>
+                            <p class="text-sm text-stone-600 mb-4 leading-relaxed">
+                                Exquisita mezcla de vegetales frescos del valle, carnes seleccionadas, champiñones, aceitunas y extra queso mozzarella.
+                            </p>
+                            <!-- Size Price List -->
+                            <div class="space-y-1.5 bg-stone-50 p-3 rounded-xl border border-stone-200/60 text-xs mb-4">
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Individual:</span>
+                                    <span class="font-bold text-stone-900">S/. 19.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Pequeña:</span>
+                                    <span class="font-bold text-stone-900">S/. 26.00</span>
+                                </div>
+                                <div class="flex justify-between py-1 border-b border-stone-200/50">
+                                    <span class="text-stone-600 font-medium">Mediana:</span>
+                                    <span class="font-bold text-stone-900">S/. 40.00</span>
+                                </div>
+                                <div class="flex justify-between py-1">
+                                    <span class="text-stone-600 font-medium">Familiar:</span>
+                                    <span class="font-bold text-brand-600">S/. 55.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-2">
+                            <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20la%20Pizza%20Suprema" target="_blank" rel="noopener noreferrer" 
+                               class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 shadow">
+                                <i class="fa-brands fa-whatsapp text-sm"></i> Pedir por WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Additional Dishes Header -->
+            <div class="mb-8 pt-6 border-t border-stone-200">
+                <h3 class="text-2xl font-bold text-stone-900 mb-2">Platos Adicionales y Especiales</h3>
+                <p class="text-stone-600 text-sm">Prueba nuestras carnes a la parrilla y especialidades de alitas.</p>
+            </div>
+
+            <!-- Additional Dishes Grid (Filete, Chuleta, Alitas Picantes, Alitas Acevichadas) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Dish 1: Filete de Pollo -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="h-40 rounded-xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="https://images.unsplash.com/photo-1604908176997-125f2596f37c?q=80&w=500&auto=format&fit=crop" 
+                                 alt="Filete de Pollo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x300/e7e5e4/44403c?text=Filete+de+Pollo'">
+                        </div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">Filete de Pollo</h4>
+                        <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+                            Jugoso filete de pollo marinado a las finas hierbas, acompañado de papas doradas y ensalada fresca del día.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-stone-500 font-medium">Precio:</span>
+                            <span class="text-base font-bold text-stone-900">S/. 24.00</span>
+                        </div>
+                        <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20Filete%20de%20Pollo" target="_blank" rel="noopener noreferrer" 
+                           class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dish 2: Chuleta de Cerdo -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="h-40 rounded-xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=500&auto=format&fit=crop" 
+                                 alt="Chuleta de Cerdo" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x300/e7e5e4/44403c?text=Chuleta+de+Cerdo'">
+                        </div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">Chuleta de Cerdo</h4>
+                        <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+                            Tierna chuleta de cerdo a la parrilla con sazón especial de la casa, servida con papas nativas y guarnición.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-stone-500 font-medium">Precio:</span>
+                            <span class="text-base font-bold text-stone-900">S/. 26.00</span>
+                        </div>
+                        <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20Chuleta%20de%20Cerdo" target="_blank" rel="noopener noreferrer" 
+                           class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dish 3: Alitas Picantes -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="h-40 rounded-xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="https://images.unsplash.com/photo-1567620832903-9fc6debc209f?q=80&w=500&auto=format&fit=crop" 
+                                 alt="Alitas Picantes" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x300/e7e5e4/44403c?text=Alitas+Picantes'">
+                        </div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">Alitas Picantes</h4>
+                        <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+                            Alitas crujientes bañadas en nuestra salsa picante estilo Buffalo con un toque secreto de la región.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-stone-500 font-medium">Precio:</span>
+                            <span class="text-base font-bold text-stone-900">S/. 22.00</span>
+                        </div>
+                        <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20Alitas%20Picantes" target="_blank" rel="noopener noreferrer" 
+                           class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Dish 4: Alitas Acevichadas -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="h-40 rounded-xl overflow-hidden mb-4 bg-stone-100">
+                            <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?q=80&w=500&auto=format&fit=crop" 
+                                 alt="Alitas Acevichadas" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/400x300/e7e5e4/44403c?text=Alitas+Acevichadas'">
+                        </div>
+                        <h4 class="text-lg font-bold text-stone-900 mb-1">Alitas Acevichadas</h4>
+                        <p class="text-xs text-stone-600 mb-4 leading-relaxed">
+                            Exquisitas alitas crocantes cubiertas con salsa acevichada de la casa y un toque de ajonjolí tostado.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs text-stone-500 font-medium">Precio:</span>
+                            <span class="text-base font-bold text-stone-900">S/. 25.00</span>
+                        </div>
+                        <a href="https://wa.me/51959040140?text=Hola,%20deseo%20pedir%20Alitas%20Acevichadas" target="_blank" rel="noopener noreferrer" 
+                           class="w-full bg-stone-900 hover:bg-brand-600 text-white text-xs font-semibold py-2.5 rounded-xl transition-colors flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-sm"></i> Pedir
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact & Location Section -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-600 font-semibold text-sm uppercase tracking-wider block mb-2">Información del Negocio</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight mb-4">
+                    Visítanos o Contáctanos
+                </h2>
+                <p class="text-stone-600">
+                    Estamos listos para atenderte con la mejor cordialidad en el corazón de Aplao.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Info Card 1: Location -->
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-200/80 flex flex-col items-center text-center shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900 mb-2">Ubicación</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        Av. 3 de Abril, Aplao<br>Valle de Majes, Arequipa
+                    </p>
+                    <span class="text-xs font-semibold text-brand-600 bg-brand-50 px-3 py-1 rounded-full border border-brand-200 mt-auto">Provincia de Castilla</span>
+                </div>
+
+                <!-- Info Card 2: Hours -->
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-200/80 flex flex-col items-center text-center shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-regular fa-clock"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900 mb-2">Horario de Atención</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        <strong>Lunes a Domingo</strong><br>
+                        4:30 PM – 11:00 PM
+                    </p>
+                    <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200 mt-auto">Abierto Todos los Días</span>
+                </div>
+
+                <!-- Info Card 3: Phone & WhatsApp -->
+                <div class="bg-stone-50 p-8 rounded-3xl border border-stone-200/80 flex flex-col items-center text-center shadow-sm">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl mb-6 shadow-inner">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-stone-900 mb-2">Teléfono y Pedidos</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                        +51 959 040 140<br>Atención rápida por WhatsApp
+                    </p>
+                    <a href="https://wa.me/51959040140?text=Hola,%20deseo%20realizar%20un%20pedido%20o%20consulta" target="_blank" rel="noopener noreferrer" 
+                       class="mt-auto bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl transition-all shadow flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i> Abrir Chat
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div>
+                <a href="#inicio" class="text-xl font-extrabold text-white tracking-tight block mb-2">Fundo Barra</a>
+                <p class="text-sm text-stone-400">Pizzería y Restaurante Campestre en Aplao, Valle de Majes.</p>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="#inicio" class="text-sm hover:text-white transition-colors">Inicio</a>
+                <a href="#nosotros" class="text-sm hover:text-white transition-colors">Nosotros</a>
+                <a href="#productos" class="text-sm hover:text-white transition-colors">Productos</a>
+                <a href="#contacto" class="text-sm hover:text-white transition-colors">Contacto</a>
+            </div>
+            <p class="text-xs text-stone-500">
+                &copy; 2026 Fundo Barra. Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/51959040140?text=Hola,%20deseo%20información%20sobre%20sus%20pizzas%20y%20platos%20en%20Fundo%20Barra" target="_blank" rel="noopener noreferrer"
+       class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl transition-all hover:scale-110 focus:outline-none"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
